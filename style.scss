@@ -51,11 +51,11 @@ body{
         line-height: 142%;
         color: rgba(255, 255, 255, 1);
         padding: 16px 65px;
+        
 
         &:hover{
             background-color: #fff;
             color: rgba(0, 0, 0, 1);
-
         }
     }
 }
@@ -84,6 +84,7 @@ body{
     background-image: url(./images/star6.png), url(./images/star8.png), url(./images/star7.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: right 77px, 25px 770px, 40px 822px;
+    
     &__text{
         font-weight:700;
         font-size:64px;
@@ -105,46 +106,40 @@ body{
 }
 
 .about-box{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    display: grid;
     gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
     
     &__link{
         text-decoration: none;
         color: rgba(32, 32, 39, 1);
-
-    }
-
-    &__cards{
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 32px;
-        align-items: flex-start;
-    }
-    
-    &__card{
-        width: 378px;
-        border-radius: 30px;
-        background-color: #fff;
-
-        &:hover{
-            cursor:pointer;
-            transform:scale(1.05);
-            transition: 1s;
+        grid-column: span 4;
         }
+    
+}
+
+.about-box-card{
+    width: 378px;
+    border-radius: 30px;
+    background-color: #fff;
+    
+
+    &:hover{
+        cursor:pointer;
+        transform:scale(1.05);
+        transition: 1s;
     }
 
-    &__card-size1{
+
+    &__size1{
         height: 473px;
     }
 
-    &__card-size2{
+    &__size2{
         height: 512px;
     }
 
-    &__card-size3{
+    &__size3{
         height: 551px;
     }
 
@@ -179,6 +174,9 @@ body{
 .game-box{
     background-color: rgba(32, 32, 39, 1);
     padding-bottom: 144px;
+    background-image: url(./images/star8.png),url(./images/star7.png), url(./images/star7-1.png), url(./images/star8-1.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 90% 93px, 95% 126px, right 52px bottom 65px, right 150px bottom 45px;
     
     &__text-box{
         margin-bottom: 72px;
@@ -195,6 +193,7 @@ body{
 }
 
 .game{
+    height: 500px;
     background-color:rgb(255,255,255,1);
     border-radius: 30px;
     display: flex;

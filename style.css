@@ -96,45 +96,39 @@ body {
 }
 
 .about-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  display: grid;
   gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
 }
 .about-box__link {
   text-decoration: none;
   color: rgb(32, 32, 39);
+  grid-column: span 4;
 }
-.about-box__cards {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 32px;
-  align-items: flex-start;
-}
-.about-box__card {
+
+.about-box-card {
   width: 378px;
   border-radius: 30px;
   background-color: #fff;
 }
-.about-box__card:hover {
+.about-box-card:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: 1s;
 }
-.about-box__card-size1 {
+.about-box-card__size1 {
   height: 473px;
 }
-.about-box__card-size2 {
+.about-box-card__size2 {
   height: 512px;
 }
-.about-box__card-size3 {
+.about-box-card__size3 {
   height: 551px;
 }
-.about-box__img {
+.about-box-card__img {
   border-radius: 30px;
 }
-.about-box__text {
+.about-box-card__text {
   background-color: #fff;
   padding-top: 40px;
   padding-left: 32px;
@@ -142,14 +136,14 @@ body {
   padding-bottom: 36px;
   border-radius: 30px;
 }
-.about-box__number {
+.about-box-card__number {
   font-weight: 500;
   font-size: 16px;
   line-height: 110%;
   color: #202027;
   padding-bottom: 26px;
 }
-.about-box__name {
+.about-box-card__name {
   width: 314px;
   font-weight: 700;
   font-size: 32px;
@@ -159,6 +153,9 @@ body {
 .game-box {
   background-color: rgb(32, 32, 39);
   padding-bottom: 144px;
+  background-image: url(./images/star8.png), url(./images/star7.png), url(./images/star7-1.png), url(./images/star8-1.png);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 90% 93px, 95% 126px, right 52px bottom 65px, right 150px bottom 45px;
 }
 .game-box__text-box {
   margin-bottom: 72px;
@@ -172,6 +169,7 @@ body {
 }
 
 .game {
+  height: 500px;
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
   display: flex;
